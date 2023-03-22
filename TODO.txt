@@ -1,0 +1,24 @@
+
+Le serveur a deux action read.
+readAll - retransmet les cours a venir
+admin - retransmet TOUT (historique + à venir)
+
+=> renvois au front via "planning[sportName]" pour l'intégrer
+directement au reducer associé.
+
+
+Le check Token se fait sur TOUTES les routes
+execepté : SignUp - readAll 
+=> possibilité de lire le planning meme si non inscrit
+
+
+AddOneInSlots :
+L'admin peut lui meme se rajouter autant de fois qu'il souhaite
+pour donner l'impression de cours remplis (peu attractif si
+la majorité des cours sont vide....)
+
+RemoveOneInSlots suppr. tout les ID associé :
+=> permet a l'admin de suppr. TOUT ses fake inscrits en un clic
+=> les membres ne peuvent s'inscrire que une fois par cours
+donc pas de conflits a ce niveau
+
